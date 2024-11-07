@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.con{
+    display: block;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.scrollbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 수직 중앙 정렬 */
+    gap: 10px;
+    margin: 20px 0;
+    position: relative; /* 자식 요소의 절대 위치 설정을 위한 상대적 위치 */
+}
+
+.scroll-line {
+    width: 2px; /* 선의 두께 */
+    height: 30px; /* 기본 선의 높이 */
+    background-color: #000; /* 선 색상 */
+    transition: height 0.3s ease; /* 높이 변화에 부드러운 효과 */
+}
+
+.scroll-line.active {
+    height: 50px; /* 선택된 선의 길이 */
+}
+
+.project-title {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.project-name {
+    font-size: 20px;
+    color: #666;
+}
+
+
+.navigation{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .con{
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Swiper</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        /* 기본 스타일 설정 */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh; /* 전체 화면 높이 */
+            margin: 0; /* 기본 마진 제거 */
+        }
+
+        .swiper-container {
+            display: flex;
+            justify-content: center; /* 슬라이드 중앙 정렬 */
+        }
+
+        .swiper-wrapper {
+            overflow: hidden; /* 슬라이드 외부 내용 숨기기 */
+        }
+
+    .swiper-slide {
+            display: flex;
+            justify-content: center; /* 슬라이드 내 이미지 중앙 정렬 */
+            align-items: center; /* 슬라이드 내 이미지 수직 중앙 정렬 */
+        }
+
+        .project-image {
+            width: 400px; /* 이미지 너비 */
+            height: 300px; /* 이미지 높이 */
+            object-fit: cover; /* 이미지 비율 유지 및 잘라내기 */
+        }
+        
+        /* 중앙에 위치한 제목과 이름 스타일 */
+        .project-title, .project-name {
+            text-align: center; /* 중앙 정렬 */
+            margin: 10px 0; /* 위아래 간격 */
+        }
+
+        /* 스크롤바 스타일 */
+        .scrollbar-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* 수직 중앙 정렬 */
+            gap: 10px;
+            margin: 20px 0;
+            position: relative; /* 자식 요소의 절대 위치 설정을 위한 상대적 위치 */
+        }
+
+        .scroll-line {
+            width: 2px; /* 선의 두께 */
+            height: 30px; /* 기본 선의 높이 */
+            background-color: #000; /* 선 색상 */
+            transition: height 0.3s ease; /* 높이 변화에 부드러운 효과 */
+        }
+
+        .scroll-line.active {
+            height: 50px; /* 선택된 선의 길이 */
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="navigation">
+            <div class="vis">visual</div>
+            <div class="dig">digital</div>
+        </div>
+
+        <div class="container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- 슬라이드로 이미지 감싸기 -->
+                    <div class="swiper-slide">
+                        <img src="images/img1.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img2.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img3.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img4.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img5.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img6.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img7.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img8.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img9.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img10.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img11.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img12.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img13.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img14.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img15.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img16.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img17.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img18.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img19.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img20.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img21.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/img22.jpg" alt="프로젝트 이미지" class="project-image">
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <h1 class="project-title" id="project-title">프로젝트 제목</h1>
+            <h2 class="project-name" id="project-name">프로젝트 이름</h2>
+
+            <!-- 스크롤바 추가 -->
+            <div class="scrollbar-container" id="scrollbar-container">
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        // Swiper 초기화
+        const swiper = new Swiper('.swiper-container', {
+    grabCursor: true,
+    slidesPerView: 1, // 한 번에 보여줄 슬라이드 수를 1로 설정
+    loop: false, // 루프 비활성화
+    spaceBetween: 0, // 슬라이드 간 간격 0으로 설정
+    centeredSlides: true, // 현재 슬라이드를 중앙에 위치
+    on: {
+        slideChange: function () {
+            const currentIndex = this.activeIndex;
+            updateContent(currentIndex); // 이미지 및 텍스트 업데이트
+            setActiveLine(currentIndex); // 스크롤바 선 업데이트
+        }
+    }
+});
+
+const titles = [
+    "제목 1", "제목 2", "제목 3", "제목 4", "제목 5",
+    "제목 6", "제목 7", "제목 8", "제목 9", "제목 10",
+    "제목 11", "제목 12", "제목 13", "제목 14", "제목 15",
+    "제목 16", "제목 17", "제목 18", "제목 19", "제목 20",
+    "제목 21", "제목 22"
+];
+
+const names = [
+    "이름 1", "이름 2", "이름 3", "이름 4", "이름 5",
+    "이름 6", "이름 7", "이름 8", "이름 9", "이름 10",
+    "이름 11", "이름 12", "이름 13", "이름 14", "이름 15",
+    "이름 16", "이름 17", "이름 18", "이름 19", "이름 20",
+    "이름 21", "이름 22"
+];
+
+            // 초기 이미지 및 텍스트 설정
+            updateContent(0); // 첫 번째 슬라이드에 대한 초기 설정
+            setActiveLine(0); // 초기 스크롤바 설정
+
+            // 이미지 및 텍스트 업데이트 함수
+function updateContent(index) {
+    const projectImage = document.querySelector('.project-image'); // 현재 슬라이드의 이미지
+    projectImage.src = `images/img${index + 1}.jpg`; // 이미지 파일 경로
+    document.getElementById('project-title').textContent = titles[index]; // 제목 업데이트
+    document.getElementById('project-name').textContent = names[index]; // 이름 업데이트
+}
+
+            // 스크롤바의 긴 선을 업데이트하는 함수
+            function setActiveLine(index) {
+                const lines = document.querySelectorAll('.scroll-line');
+                lines.forEach((line, i) => {
+                    line.classList.remove('active'); // 모든 선 비활성화
+                });
+                lines[index].classList.add('active'); // 현재 인덱스에 해당하는 선 활성화
+            }
+        });
+    </script>
+</body>
+</html>
+
